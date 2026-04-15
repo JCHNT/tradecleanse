@@ -1,0 +1,15 @@
+expectation,status,detail
+1. trade_id unique,PASS,0 doublons
+2. Colonnes obligatoires non NaN,PASS,"0 NaN totaux sur ['trade_id', 'counterparty_id', 'isin', 'trade_date', 'asset_class', 'price', 'quantity', 'default_flag']"
+3. settlement_date >= trade_date,PASS,0 violations
+4. bid < ask,PASS,0 violations
+"5. price in [bid*0.995, ask*1.005]",PASS,0 violations
+6. mid_price ~= (bid+ask)/2,PASS,0 violations
+7. asset_class in référentiel,PASS,0 hors référentiel
+8. pas de contradiction rating/défaut,PASS,0 violations
+9. notional_eur > 0,PASS,0 violations
+"10. country_risk in [0,100]",PASS,0 violations
+11. ISIN format valide,PASS,0 invalides
+"12. volatility_30d in [0.1, 200]",PASS,0 violations
+13. complétude > 90%,PASS,100.00%
+14. PII supprimées,PASS,colonnes PII absentes

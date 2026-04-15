@@ -1,0 +1,6 @@
+variable,ks_stat,p_value,drift
+price,0.0162,0.617707,NO
+volatility_30d,0.0158,0.647459,NO
+notional_eur,0.0273,0.078203,NO
+volume_j,0.0137,0.808076,NO
+country_risk,0.0167,0.576819,NO

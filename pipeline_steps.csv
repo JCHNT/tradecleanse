@@ -1,0 +1,10 @@
+etape,lignes_avant,lignes_apres,nans_avant,nans_apres
+Sentinelles,8950,8950,2501,2593
+Doublons,8950,8750,2593,2534
+Types,8750,8750,2534,2534
+asset_class,8750,8750,2534,2901
+Incoherences,8750,8750,2901,2901
+Regles_metier,8750,8750,2901,2907
+Outliers,8750,8750,2907,2907
+Valeurs_manquantes,8750,8750,2907,0
+Pseudonymisation,8750,8750,0,0

@@ -1,0 +1,44 @@
+2026-04-15 10:22:03,749 | INFO | Dataset chargé : 8950 lignes, 20 colonnes
+2026-04-15 10:22:03,770 | INFO | [Sentinelles] lignes 8950->8950 | NaN 2501->2593
+2026-04-15 10:22:03,780 | INFO | Doublons exacts : 200 | Doublons trade_id : 0
+2026-04-15 10:22:03,781 | INFO | [Doublons] lignes 8950->8750 | NaN 2593->2534
+2026-04-15 10:22:03,791 | INFO | [Types] lignes 8750->8750 | NaN 2534->2534
+2026-04-15 10:22:03,793 | INFO | asset_class distinct après : ['derivative', 'equity', 'fx', 'bond']
+2026-04-15 10:22:03,794 | INFO | [asset_class] lignes 8750->8750 | NaN 2534->2901
+2026-04-15 10:22:03,795 | INFO | 5a settlement<trade corrigés : 80
+2026-04-15 10:22:03,796 | INFO | 5b bid>ask swaps : 120
+2026-04-15 10:22:03,797 | INFO | 5c mid_price recalculés : 297
+2026-04-15 10:22:03,797 | INFO | 5d price hors fourchette → mid : 150
+2026-04-15 10:22:03,797 | INFO | 5e notional<0 → abs : 40
+2026-04-15 10:22:03,799 | INFO | 5f rating AAA/AA/A + default=1 → D : 96
+2026-04-15 10:22:03,800 | INFO | [Incoherences] lignes 8750->8750 | NaN 2901->2901
+2026-04-15 10:22:03,803 | INFO | [Regles_metier] lignes 8750->8750 | NaN 2901->2907
+2026-04-15 10:22:04,604 | INFO | IQR notional_eur: bounds=[-5202583.70, 8806576.47] outliers=1018
+2026-04-15 10:22:04,606 | INFO | IQR volatility_30d: bounds=[-36.03, 125.46] outliers=0
+2026-04-15 10:22:04,608 | INFO | IQR volume_j: bounds=[-2586194.38, 7590190.62] outliers=0
+2026-04-15 10:22:04,855 | INFO | Isolation Forest : 175 lignes flaggées (2%)
+2026-04-15 10:22:04,856 | INFO | [Outliers] lignes 8750->8750 | NaN 2907->2907
+2026-04-15 10:22:04,858 | INFO | NaN rates pré-imputation :
+credit_rating     0.149829
+volatility_30d    0.137029
+asset_class       0.041943
+country_risk      0.003429
+dtype: float64
+2026-04-15 10:22:04,860 | INFO | trade_id NaN supprimés : 0
+2026-04-15 10:22:04,867 | INFO | [Valeurs_manquantes] lignes 8750->8750 | NaN 2907->0
+2026-04-15 10:22:04,873 | INFO | PII pseudonymisée : counterparty_name → counterparty_name_hash
+2026-04-15 10:22:04,878 | INFO | PII pseudonymisée : trader_id → trader_id_hash
+2026-04-15 10:22:04,879 | INFO | [Pseudonymisation] lignes 8750->8750 | NaN 0->0
+2026-04-15 10:22:04,881 | INFO | 
+╔══════════════════════════════════════════════════╗
+║       RAPPORT QUALITÉ — AVANT / APRÈS            ║
+╠══════════════════════════════════════════════════╣
+║ Shape brut    :                     (8950, 20) ║
+║ Shape clean   :                     (8750, 25) ║
+║ Complétude raw:                       98.60 % ║
+║ Complétude clean:                    100.00 % ║
+║ Unicité trade_id:                   100.00 % ║
+║ Data Quality Score :                   100.00    ║
+╚══════════════════════════════════════════════════╝
+
+2026-04-15 10:22:04,918 | INFO | Dataset nettoyé sauvegardé : data/tradecleanse_clean.csv

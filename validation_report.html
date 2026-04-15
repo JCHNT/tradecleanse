@@ -1,0 +1,22 @@
+<html><head><meta charset='utf-8'><title>Validation Report</title>
+<style>body{font-family:sans-serif;margin:2em}table{border-collapse:collapse}
+td,th{border:1px solid #ccc;padding:6px 12px}.PASS{color:green;font-weight:bold}
+.FAIL{color:red;font-weight:bold}</style></head><body>
+<h1>TradeCleanse — Validation Report</h1>
+<h2>Score : 14/14</h2>
+<table><tr><th>#</th><th>Expectation</th><th>Status</th><th>Detail</th></tr>
+<tr><td>1</td><td>1. trade_id unique</td><td class='PASS'>PASS</td><td>0 doublons</td></tr>
+<tr><td>2</td><td>2. Colonnes obligatoires non NaN</td><td class='PASS'>PASS</td><td>0 NaN totaux sur ['trade_id', 'counterparty_id', 'isin', 'trade_date', 'asset_class', 'price', 'quantity', 'default_flag']</td></tr>
+<tr><td>3</td><td>3. settlement_date >= trade_date</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>4</td><td>4. bid < ask</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>5</td><td>5. price in [bid*0.995, ask*1.005]</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>6</td><td>6. mid_price ~= (bid+ask)/2</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>7</td><td>7. asset_class in référentiel</td><td class='PASS'>PASS</td><td>0 hors référentiel</td></tr>
+<tr><td>8</td><td>8. pas de contradiction rating/défaut</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>9</td><td>9. notional_eur > 0</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>10</td><td>10. country_risk in [0,100]</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>11</td><td>11. ISIN format valide</td><td class='PASS'>PASS</td><td>0 invalides</td></tr>
+<tr><td>12</td><td>12. volatility_30d in [0.1, 200]</td><td class='PASS'>PASS</td><td>0 violations</td></tr>
+<tr><td>13</td><td>13. complétude > 90%</td><td class='PASS'>PASS</td><td>100.00%</td></tr>
+<tr><td>14</td><td>14. PII supprimées</td><td class='PASS'>PASS</td><td>colonnes PII absentes</td></tr>
+</table></body></html>

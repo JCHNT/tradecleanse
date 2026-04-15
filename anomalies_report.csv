@@ -1,0 +1,12 @@
+type,col,count,criticity
+duplicate,trade_id,200,HIGH — corrompt clé unique → biais aval
+incoherence_temporelle,settlement_date<trade_date,81,HIGH — viole T+2 BCBS 239
+incoherence_prix,bid>ask,121,HIGH — fourchette inversée impossible
+incoherence_calc,mid_price,306,MED — feature contaminée
+price_out_range,price,270,HIGH — prix exécution impossible
+notional_neg,notional_eur,42,MED — notional signé non doc
+rating_vs_default,credit_rating/default_flag,97,CRITICAL — contradiction rating/défaut
+nan,volatility_30d,1228,MED — ~15% NaN
+nan,credit_rating,1341,HIGH — rating manquant = risque non évaluable
+casse_inconsistante,asset_class,20,MED — variantes casse / abrev
+outlier_multivarie,price+volume_j+volatility_30d,155,HIGH — pattern suspect multidim
